@@ -10,6 +10,7 @@ Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
 Group(pt_BR):	Rede/Utilitários
 Source0:	ftp://truffula.com/pub/%{name}-%{version}.tar.gz
+Patch0:		%{name}-no_libnsl.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,20 +36,21 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-mv -f aclocal.m4 acinclude.m4
-#aclocal
-#automake -a -c
-#autoconf
-#autoheader
-%configure2_13
+rm -f missing acinclude.m4
+aclocal
+autoconf
+automake -a -c
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS NEWS README THANKS TODO
 
