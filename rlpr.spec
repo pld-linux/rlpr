@@ -38,7 +38,7 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 rm -f missing acinclude.m4
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
