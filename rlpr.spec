@@ -39,7 +39,7 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 
 %build
 rm -f missing acinclude.m4
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
