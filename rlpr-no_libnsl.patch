@@ -1,0 +1,11 @@
+--- rlpr-2.04/configure.in~	Wed Nov 21 07:11:22 2001
++++ rlpr-2.04/configure.in	Wed Nov 21 07:11:22 2001
+@@ -37,7 +37,7 @@
+ AM_GNU_GETTEXT
+ 
+ dnl Checks for libraries.
+-AC_CHECK_LIB(nsl, gethostbyname)
++AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
+ AC_CHECK_LIB(socket, socket)
+ 
+ dnl Checks for header files.
