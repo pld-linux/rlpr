@@ -46,8 +46,6 @@ autoheader
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_mandir}/man{1,5,8},%{_bindir}}
-
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
@@ -55,6 +53,6 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
 %doc *.gz
-%{_mandir}/man*/*.gz
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man*/*
