@@ -1,0 +1,12 @@
+diff -Naur rlpr-2.02/aclocal.m4 rlpr-2.02-p/aclocal.m4
+--- rlpr-2.02/aclocal.m4	Thu Sep  2 16:12:59 1999
++++ rlpr-2.02-p/aclocal.m4	Tue Jul 11 20:28:05 2000
+@@ -34,7 +34,7 @@
+ dnl AM_INIT_AUTOMAKE(package,version, [no-define])
+ 
+ AC_DEFUN(AM_INIT_AUTOMAKE,
+-[AC_REQUIRE([AM_PROG_INSTALL])
++[AC_REQUIRE([AC_PROG_INSTALL])
+ PACKAGE=[$1]
+ AC_SUBST(PACKAGE)
+ VERSION=[$2]
