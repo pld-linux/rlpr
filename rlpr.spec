@@ -2,7 +2,7 @@ Summary:	Remote printing utilities
 Summary(pl):	Narzêdzia do zdalnego drukowania
 Name:		rlpr
 Version:	2.04
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://truffula.com/pub/%{name}-%{version}.tar.gz
@@ -39,9 +39,10 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 %patch1 -p1
 
 %build
-rm -f missing acinclude.m4
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
