@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://truffula.com/pub/%{name}-%{version}.tar.gz
 Patch0:		%{name}-no_libnsl.patch
+Patch1:		%{name}-ac25x.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -34,6 +35,7 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing acinclude.m4
