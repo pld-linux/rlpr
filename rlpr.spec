@@ -5,8 +5,13 @@ Version:	2.04
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
+Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
 Source0:	ftp://truffula.com/pub/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,7 +39,7 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 %build
 mv -f aclocal.m4 acinclude.m4
 aclocal
-automake
+automake -a -c
 autoconf
 autoheader
 %configure
@@ -46,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf AUTHORS NEWS README THANKS TODO
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
