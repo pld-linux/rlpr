@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	ftp://truffula.com/pub/%{name}-%{version}.tar.gz
+# Source0-md5:	d4560cad31b0f031796a260b6d6b7123
 Patch0:		%{name}-no_libnsl.patch
 Patch1:		%{name}-ac25x.patch
 BuildRequires:	autoconf
