@@ -38,10 +38,10 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 
 %build
 mv -f aclocal.m4 acinclude.m4
-aclocal
-automake -a -c
-autoconf
-autoheader
+#aclocal
+#automake -a -c
+#autoconf
+#autoheader
 %configure2_13
 %{__make}
 
