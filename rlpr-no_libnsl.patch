@@ -5,7 +5,7 @@
  
  dnl Checks for libraries.
 -AC_CHECK_LIB(nsl, gethostbyname)
-+AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
++AC_CHECK_FUNC(gethostbyname, [], [AC_CHECK_LIB(nsl, gethostbyname)])
  AC_CHECK_LIB(socket, socket)
  
  dnl Checks for header files.
