@@ -34,7 +34,6 @@ mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
 %patch0 -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 mv -f aclocal.m4 acinclude.m4
 aclocal
 automake
@@ -48,8 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
-	AUTHORS NEWS README THANKS TODO
+gzip -9nf AUTHORS NEWS README THANKS TODO
 
 %files
 %defattr(644,root,root,755)
