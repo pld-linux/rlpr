@@ -15,15 +15,6 @@
  
  AC_REPLACE_FUNCS(strdup strstr strcasecmp)
 -AC_CHECK_FUNC(getopt_long,, [LIBOBJS="$LIBOBJS getopt1.o getopt.o"])
-+AC_CHECK_FUNC(getopt_long, [], [AC_LIBOBJ="$AC_LIBOBJ getopt1.o getopt.o"])
++AC_CHECK_FUNC(getopt_long, [], [AC_LIBOBJ([getopt1]) AC_LIBOBJ([getopt])])
  
  AC_OUTPUT([Makefile lib/Makefile src/Makefile intl/Makefile man/Makefile po/Makefile.in], [sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in > po/Makefile])
---- rlpr-2.04/lib/Makefile.am~	Thu Jul 25 06:38:27 2002
-+++ rlpr-2.04/lib/Makefile.am	Thu Jul 25 06:38:27 2002
-@@ -28,5 +28,5 @@
- 
- noinst_HEADERS = error.h lib.h getopt.h xstrtol.h xstrtoul.h
- 
--librlpr_a_LIBADD = @LIBOBJS@ @ALLOCA@
-+librlpr_a_LIBADD = $(AC_LIBOBJ) $(ALLOCA)
- librlpr_a_DEPENDENCIES = $(librlpr_a_LIBADD)
