@@ -42,7 +42,7 @@ aclocal
 automake -a -c
 autoconf
 autoheader
-%configure
+%configure2_13
 %{__make}
 
 %install
