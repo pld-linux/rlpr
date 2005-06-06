@@ -1,20 +1,11 @@
---- rlpr-2.04/configure.in~	Thu Jul 25 06:34:18 2002
-+++ rlpr-2.04/configure.in	Thu Jul 25 06:34:18 2002
-@@ -23,9 +23,6 @@
- dnl Set of available languages
- ALL_LINGUAS=
- 
--dnl LIBOBJS builds a list of all the helper source files we need
--LIBOBJS=
--AC_SUBST(LIBOBJS)
- 
- dnl Checks for programs.
- AC_PROG_INSTALL
-@@ -110,6 +110,6 @@
- AC_CHECK_FUNCS(strchr getopt_long strcasecmp strtoul strtol)
+--- rlpr-2.06/configure.in.orig	2005-06-06 12:08:38.000000000 +0200
++++ rlpr-2.06/configure.in	2005-06-06 12:10:01.000000000 +0200
+@@ -103,7 +103,7 @@
+ AC_CHECK_FUNCS(strchr getopt_long strcasecmp strtoul strtol vsyslog)
  
  AC_REPLACE_FUNCS(strdup strstr strcasecmp)
--AC_CHECK_FUNC(getopt_long,, [LIBOBJS="$LIBOBJS getopt1.o getopt.o"])
-+AC_CHECK_FUNC(getopt_long, [], [AC_LIBOBJ([getopt1]) AC_LIBOBJ([getopt])])
+-AC_CHECK_FUNC(getopt_long,, AC_LIBOBJ([getopt1]) AC_LIBOBJ([getopt]))
++AC_CHECK_FUNC(getopt_long,, [AC_LIBOBJ([getopt1]) AC_LIBOBJ([getopt])])
  
- AC_OUTPUT([Makefile lib/Makefile src/Makefile intl/Makefile man/Makefile po/Makefile.in], [sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in > po/Makefile])
+ AC_CONFIG_FILES([Makefile lib/Makefile src/Makefile intl/Makefile man/Makefile po/Makefile.in])
+ AC_OUTPUT
