@@ -28,10 +28,10 @@ lightweight, cleaner and more secure than their BSD counterparts.
 Rlpr jest pakietem który umo¿liwia (lub co najmniej u³atwia)
 drukowanie plików ze zdalnych komputerów na lokalnej drukarce. Pakiet
 rlpr zawiera zastêpniki dla 'lpr', 'lpq' i 'lprm', których funkcje s±
-nadzbiorem BSDowych odpowiedników. Inaczej mówi±c oznacza to, ¿e
-mo¿esz nimi robiæ to wszystko co oryginalnymi komendami BSD i jeszcze
-wiêcej. Programy z pakietu rlpr s± wszystkie na licencji GPL, s±
-mniejsze, czystsze i bardziej bezpieczne ni¿ ich BSDowe zastêpniki.
+nadzbiorem odpowiedników z BSD. Inaczej mówi±c oznacza to, ¿e mo¿na
+nimi robiæ to wszystko co oryginalnymi komendami BSD i jeszcze wiêcej.
+Programy z pakietu rlpr s± wszystkie na licencji GPL, s± mniejsze,
+czystsze i bardziej bezpieczne ni¿ ich odpowieniki z BSD.
 
 %prep
 %setup -q
