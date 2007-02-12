@@ -1,5 +1,5 @@
 Summary:	Remote printing utilities
-Summary(pl.UTF-8):   Narzędzia do zdalnego drukowania
+Summary(pl.UTF-8):	Narzędzia do zdalnego drukowania
 Name:		rlpr
 Version:	2.06
 Release:	1
