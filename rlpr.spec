@@ -1,5 +1,5 @@
 Summary:	Remote printing utilities
-Summary(pl):	Narzêdzia do zdalnego drukowania
+Summary(pl.UTF-8):   NarzÄ™dzia do zdalnego drukowania
 Name:		rlpr
 Version:	2.06
 Release:	1
@@ -26,14 +26,14 @@ everything you can do with the BSD printing commands, and more. The
 programs contained within the rlpr package are all GPL'd, and are more
 lightweight, cleaner and more secure than their BSD counterparts.
 
-%description -l pl
-Rlpr jest pakietem który umo¿liwia (lub co najmniej u³atwia)
-drukowanie plików ze zdalnych komputerów na lokalnej drukarce. Pakiet
-rlpr zawiera zastêpniki dla 'lpr', 'lpq' i 'lprm', których funkcje s±
-nadzbiorem odpowiedników z BSD. Inaczej mówi±c oznacza to, ¿e mo¿na
-nimi robiæ to wszystko co oryginalnymi komendami BSD i jeszcze wiêcej.
-Programy z pakietu rlpr s± wszystkie na licencji GPL, s± mniejsze,
-czystsze i bardziej bezpieczne ni¿ ich odpowieniki z BSD.
+%description -l pl.UTF-8
+Rlpr jest pakietem ktÃ³ry umoÅ¼liwia (lub co najmniej uÅ‚atwia)
+drukowanie plikÃ³w ze zdalnych komputerÃ³w na lokalnej drukarce. Pakiet
+rlpr zawiera zastÄ™pniki dla 'lpr', 'lpq' i 'lprm', ktÃ³rych funkcje sÄ…
+nadzbiorem odpowiednikÃ³w z BSD. Inaczej mÃ³wiÄ…c oznacza to, Å¼e moÅ¼na
+nimi robiÄ‡ to wszystko co oryginalnymi komendami BSD i jeszcze wiÄ™cej.
+Programy z pakietu rlpr sÄ… wszystkie na licencji GPL, sÄ… mniejsze,
+czystsze i bardziej bezpieczne niÅ¼ ich odpowieniki z BSD.
 
 %prep
 %setup -q
